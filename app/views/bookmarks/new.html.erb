@@ -1,5 +1,6 @@
 <%= simple_form_for [ @list, @bookmark ] do |f| %>
   <%= f.association :movie %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
   <%= f.input :comment %>
   <%= f.submit "Submit", class: "btn btn-primary" %>
 <% end %>

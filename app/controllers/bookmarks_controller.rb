@@ -6,8 +6,19 @@ class BookmarksController < ApplicationController
   end
 
   def create
-    @bookmark = Bookmark.new(comment: params[:comment], list_id: params[:list_id], movie: @movie)
-    @bookmark.save
+    @list = params[:list_id]
+    @movie = params[:bookmark][:movie_id]
+    @comment = params[:bookmark][:comment]
+    @bookmark = Bookmark.new(comment: @comment, list_id: @list, movie_id: @movie)
+    if @bookmark.save
+      redirect_to list_path(@list)
+    else
+      render 'lists/show'
+    end
   end
 
+  def destroy
+    @bookmark = Bookmark.find(params[:id])
+    @bookmark.destroy
+  end
 end
