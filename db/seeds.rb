@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Movie.destroy_all
+
 Movie.create(title: "Wonder Woman 1984",
 overview: "Wonder Woman comes into conflict with the Soviet Union during the Cold War in the 1980s",
 poster_url: "https://image.tmdb.org/t/p/original/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg",
@@ -18,7 +20,7 @@ rating: 8.5)
 
 Movie.create(title: "Reservoir Dogs 1992",
 overview: "Reservoir Dogs is a 1992 American crime film written and directed by Quentin Tarantino in his feature-length debut. It stars Harvey Keitel, Tim Roth, Chris Penn, Steve Buscemi, Lawrence Tierney, Michael Madsen, Tarantino, and Edward Bunker as diamond thieves whose planned heist of a jewelry store goes terribly wrong. The film depicts the events before and after, but not during, the heist. Kirk Baltz, Randy Brooks, and Steven Wright also play supporting roles. It incorporates many motifs that have become Tarantino's hallmarks: violent crime, pop culture references, profanity, and nonlinear storytelling.",
-poster_url: "https://en.wikipedia.org/wiki/File:Reservoir_Dogs.png",
+poster_url: "https://upload.wikimedia.org/wikipedia/en/0/01/Reservoir_Dogs.png",
 rating: 9.2)
 
 Movie.create(title: "A Bronx Tale 1993",
